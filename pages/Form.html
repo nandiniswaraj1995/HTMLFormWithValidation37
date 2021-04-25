@@ -80,6 +80,16 @@
               else
               emailError.textContent="Invalid Email";
          })
+         const tel=document.querySelector('#tel');
+         const telError=document.querySelector('.tel-error');
+         tel.addEventListener('input', function(){
+             let telRegex= new RegExp(/^[0-9]{5}[0-9]{6}$/);
+             if(telRegex.test(tel.value))
+              telError.textContent="";
+              else
+              telError.textContent="TelePhone Number is incorrect";
+         })
+      
  
     </script>
 </body>
